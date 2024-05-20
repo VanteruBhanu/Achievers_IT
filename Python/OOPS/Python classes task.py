@@ -48,13 +48,23 @@ class Student:
             print("Grade Obtained: D")
         else:
             print("You have failed.")
+            
+    def course_skill(self, skills):
+        skills_list =",".join(skills)
+        return (f"{self.name} choosen the {self.coursename} course\n"
+                f"This course contains the following skills: {skills_list}")
+#skills
+skills = ["Python", "Data Analysis", "Web Frameworks", "Javascript", "Database Management"]
 
 
 # Creating an instance of the Student class
-totalinfo = Student("Bhanu", "prakashbhanu8390@gmail.com", 2024, "ECE", "Btech")
+totalinfo = Student("Bhanu", "prakashbhanu8390@gmail.com", 2024, "Python Full Stack", "Btech")
 
 # Displaying information of the student
 print(totalinfo.display_info())
 
 # Calculating and displaying total marks with grade
 totalinfo.Grade()
+
+#printing the skills involved in this course
+print(totalinfo.course_skill(skills))
